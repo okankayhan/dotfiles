@@ -3,13 +3,6 @@ df_fish_clean() {
   rm -rf ${HOME}/.config/fisher
 }
 
-df_fish_install_fish(){
-  #install fish
-  sudo apt-add-repository ppa:fish-shell/release-2
-  sudo apt-get update
-  sudo apt-get install fish
-}
-
 df_fish_install_fisher() {
   #install fisher
   FISHER_URL=https://raw.githubusercontent.com/jorgebucaran/fisher/master/fisher.fish
@@ -34,7 +27,6 @@ df_install_fish() {
   fi
 
   df_fish_clean
-  df_fish_install_fish
   df_fish_install_fisher
   df_fish_install_completions
   df_fish_install_deps
